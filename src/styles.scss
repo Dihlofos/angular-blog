@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 :root {
   --primary-color: #dc3545;
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -79,7 +79,7 @@ img {
   }
 
   &-content {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -211,7 +211,7 @@ img {
 .form-control {
   display: block;
   color: #888;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 
   &.invalid {
     color: var(--primary-color);
@@ -225,10 +225,10 @@ img {
   }
 }
 
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='date'],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
 select,
 textarea {
   display: block;
@@ -238,7 +238,7 @@ textarea {
   border: 1px solid #ccc;
 }
 
-input[type='submit'],
+input[type="submit"],
 button {
   font: inherit;
 }
@@ -290,6 +290,10 @@ table th {
 
     &:hover {
       color: var(--light-color);
+    }
+
+    &.active {
+      color: black;
     }
   }
 }
