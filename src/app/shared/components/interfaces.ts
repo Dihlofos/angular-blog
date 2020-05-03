@@ -20,3 +20,10 @@ export interface Post {
 export interface FbCreateResponse {
   name: string;
 }
+
+export interface Alert {
+  type: string;
+  text: string;
+}
+
+export type AlertType = 'success' | 'warning' | 'danger';

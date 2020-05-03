@@ -1,18 +1,20 @@
-<div class="post">
+<div class="post" *ngIf="post$ | async as post; else loading">
     <div class="header">
-        <h1>Post title</h1>
+        <h1>{{post.title}}</h1>
         <button routerLink="/" class="btn btn-link">Main page</button>
     </div>
 
     <div class="info">
-        <strong>Author</strong>
-        <small>24.05.2023</small>
+        <strong>{{post.author}}</strong>
+        <small>{{post.date | date:'medium':null:'en'}}</small>
     </div>
 
     <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit temporibus iusto unde ipsam, consectetur minima, voluptatem libero natus id nam nobis doloribus magni accusantium velit. Velit placeat vel modi quidem repellat aliquid soluta libero, porro officia repudiandae sequi fuga temporibus beatae repellendus dolor tempore a ut cumque molestias id odit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit temporibus iusto unde ipsam, consectetur minima, voluptatem libero natus id nam nobis doloribus magni accusantium velit. Velit placeat vel modi quidem repellat aliquid soluta libero, porro officia repudiandae sequi fuga temporibus beatae repellendus dolor tempore a ut cumque molestias id odit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit temporibus iusto unde ipsam, consectetur minima, voluptatem libero natus id nam nobis doloribus magni accusantium velit. Velit placeat vel modi quidem repellat aliquid soluta libero, porro officia repudiandae sequi fuga temporibus beatae repellendus dolor tempore a ut cumque molestias id odit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit temporibus iusto unde ipsam, consectetur minima, voluptatem libero natus id nam nobis doloribus magni accusantium velit. Velit placeat vel modi quidem repellat aliquid soluta libero, porro officia repudiandae sequi fuga temporibus beatae repellendus dolor tempore a ut cumque molestias id odit?</p>
+        <quill-view-html [content]="post.text"></quill-view-html>
     </div>
 </div>
+
+<ng-template #loading>
+    <p class="text-center">Loading is in process...</p>
+</ng-template>
+
